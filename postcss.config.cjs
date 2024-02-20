@@ -3,6 +3,7 @@ module.exports = {
   map: false,
   plugins: [
     require('postcss-mixins'),
-    require('autoprefixer')
+    require('autoprefixer'),
+    require('postcss-nested'),
   ]
 }
