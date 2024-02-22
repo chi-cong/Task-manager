@@ -11,6 +11,7 @@
     position: absolute;
     width: 20px;
     height: 20px;
+    cursor: pointer;
     &::before {
       content: "";
       visibility: visible;
@@ -20,7 +21,6 @@
       position: absolute;
       border: solid 2px var(--black-color);
       background-size: 100%;
-      cursor: pointer;
     }
     &::after {
       content: "";
@@ -42,5 +42,6 @@
   .checkbox-label {
     position: absolute;
     left: 25px;
+    cursor: pointer;
   }
 }
