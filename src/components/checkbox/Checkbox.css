@@ -1,0 +1,46 @@
+@import url("src/index.css");
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  width: 50%;
+  height: 20px;
+  input[type="checkbox"] {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    &::before {
+      content: "";
+      visibility: visible;
+      display: block;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      border: solid 2px var(--black-color);
+      background-size: 100%;
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      visibility: visible;
+      display: block;
+      width: 5px;
+      height: 11px;
+      position: absolute;
+      top: 0.5px;
+      left: 5.5px;
+      cursor: pointer;
+    }
+    &:checked::after {
+      border-right: solid 3px var(--accent-color);
+      border-bottom: solid 3px var(--accent-color);
+      transform: rotate(45deg);
+    }
+  }
+  .checkbox-label {
+    position: absolute;
+    left: 25px;
+  }
+}

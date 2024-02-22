@@ -1,0 +1,14 @@
+@import url("src/index.css");
+
+.round-bar-button {
+  width: 100%;
+  height: 40px;
+  background: var(--primary-color);
+  border: solid 1px var(--primary-color);
+  border-radius: 20px;
+  transition-duration: var(--quick-transition);
+  &:hover {
+    background: var(--accent-color);
+    border: solid 1px var(--accent-color);
+  }
+}

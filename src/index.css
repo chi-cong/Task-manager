@@ -1,68 +1,63 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --primary-color: #4096ff;
+  --secondary-color: #597ef7;
+  --accent-color: #f759ab;
+  --warning-color: #a61d24;
+  --black-color: #262626;
+  --white-color: #ffffff;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* gap  */
+  --gap-xs: 5px;
+  --gap-s: 10px;
+  --gap-m: 15px;
+  --gap-l: 20px;
+  --gap-xl: 25px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* border */
+  --primary-border-s: solid 1px --primary-color;
+  --primary-border-m: solid 2px --primary-color;
+  --primary-border-l: solid 3px --primary-color;
+  --rounded-border: 5px;
+  --circle-border: 50%;
+
+  /* margin */
+
+  /* padding */
+  --padding-xxs: 2px;
+  --padding-xs: 5px;
+  --padding-s: 10px;
+  --padding-m: 15px;
+  --padding-l: 20px;
+  --padding-xl: 30px;
+  --padding-xxl: 50px;
+
+  /* transition */
+  --quick-transition: 0.3s;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  color: var(--black-color);
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@define-mixin fullscreen $page-name {
+  .$(page-name) {
+    width: 100vw;
+    height: 100vh;
+    @mixin-content;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+}
+
+@define-mixin flex-container $direction, $gapSize, $suffix {
+  .flex-container-$(suffix) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $(direction);
+    gap: var(--gap-$(gapSize));
+    @mixin-content;
   }
 }

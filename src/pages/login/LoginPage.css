@@ -1,0 +1,29 @@
+@import url("src/index.css");
+
+@mixin fullscreen login-page {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-container column, l, login-form {
+  width: 350px;
+  height: 500px;
+  padding-top: var(--padding-l);
+  padding-bottom: var(--padding-l);
+  padding-left: var(--padding-xxl);
+  padding-right: var(--padding-xxl);
+  background: var(--white-color);
+  border-radius: var(--rounded-border);
+  justify-content: space-between;
+  @mixin flex-container column, xl, login {
+    width: 100%;
+  }
+  .login-title {
+    font-weight: bold;
+  }
+  @mixin flex-container row, l, remember-forget {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
