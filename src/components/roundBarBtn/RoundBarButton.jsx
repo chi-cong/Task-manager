@@ -4,7 +4,9 @@ export const RoundBarButton = ({ clickFunc }) => {
   return (
     <button
       onClick={() => {
-        clickFunc();
+        if (clickFunc) {
+          clickFunc();
+        }
       }}
       className='round-bar-button'
     >

@@ -7,8 +7,11 @@
   border: solid 1px var(--primary-color);
   border-radius: 20px;
   transition-duration: var(--quick-transition);
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: var(--font-size-s);
   &:hover {
-    background: var(--accent-color);
-    border: solid 1px var(--accent-color);
+    background: var(--dark-primary-color);
+    border: solid 1px var(--dark-primary-color);
   }
 }

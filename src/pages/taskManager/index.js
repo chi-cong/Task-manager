@@ -1,1 +1,1 @@
-export { TaskManagerPage } from "./TaskManagerPage"
+export { TaskManagerPage } from "./Task-manager"
