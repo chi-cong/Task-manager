@@ -1,1 +1,1 @@
-export { TaskManagerPage } from "./Task-manager"
+export { TaskManagerPage, taskManagerLoader } from "./Task-manager"

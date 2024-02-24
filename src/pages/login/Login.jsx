@@ -7,8 +7,12 @@ import { LoginTextbox } from "src/components/login-textbox";
 import { RoundBarButton } from "src/components/roundBarBtn";
 import { Checkbox } from "src/components/checkbox";
 
-import { loginService } from "src/services";
+import { loginService, rememberLoginService } from "src/services";
 import { useNavigate } from "react-router-dom";
+
+export const loginLoader = () => {
+  return rememberLoginService({ redirectPath: "/task-manager" });
+};
 
 export const LoginPage = () => {
   const navigate = useNavigate();

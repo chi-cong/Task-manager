@@ -1,3 +1,4 @@
 export const mockToken = [{
-  token: 'abcxyz'
+  token: 'abcxyz',
+  expireDate: true
 }]

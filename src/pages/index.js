@@ -1,2 +1,2 @@
-export { LoginPage } from "src/pages/login"
-export { TaskManagerPage } from "src/pages/taskManager"
+export { LoginPage, loginLoader } from "src/pages/login"
+export { TaskManagerPage, taskManagerLoader } from "src/pages/taskManager"
