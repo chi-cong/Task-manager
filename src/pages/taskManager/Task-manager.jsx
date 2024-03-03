@@ -1,10 +1,16 @@
 import "src/pages/taskManager/Task-manager.css";
-import { routeAuthService } from "src/services";
+import { routeAuthService, getBookList } from "src/services";
+import { useLoaderData } from "react-router-dom";
 
-export const taskManagerLoader = () => {
-  return routeAuthService({ redirectPath: "/" });
+export const taskManagerLoader = async () => {
+  routeAuthService({ redirectPath: "/" });
+  const bookList = await getBookList();
+  return bookList;
 };
 
 export const TaskManagerPage = () => {
-  return <h1>Task Manager Page</h1>;
+  const bookList = useLoaderData();
+  return bookList.map((book) => {
+    return <p>{book.title}</p>;
+  });
 };
